@@ -9,7 +9,6 @@ func init() {
 	http.HandleFunc("/ip", handler)
 }
 func handler(w http.ResponseWriter, r *http.Request) {
-	header := r.RemoteAddr
-	fmt.Fprint(w, header)
+	addr := r.RemoteAddr
+	fmt.Fprint(w, addr)
 }
-
